@@ -118,3 +118,12 @@ echo -e "\033[1;97m[+] https://www.acunetix.com/blog/articles/dns-zone-transfers
 echo -e "\033[1;97m[+] For more DNS Zone Transfer Vulnerability check create curl request to https://api.hackertarget.com/zonetransfer/?q=target.com\033[0;37m"
 ender
 echo "test pull request"
+
+# Perform Open Port Scanning with Nmap
+echo " "
+echo -e "\e[41m\033[1;97m Performing Open Port Scanning with NMAP \033[0;37m"
+echo " "
+nmap --open $1
+echo " "
+echo -e "\e[45m\033[1;97m For more info visit https://phoenixnap.com/kb/nmap-scan-open-ports\033[0;37m"
+ender
