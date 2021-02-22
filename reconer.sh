@@ -44,7 +44,9 @@ spinner ()
 
 ender()
 {
+  echo " "
   echo -e "----------------------------------------------------------------------"
+  echo " "
 }
 
 # Date
@@ -70,13 +72,11 @@ echo -e "\033[0;91m  [-] node [$1] is \033[0;91m down \033[0;91m "
 echo -e "\033[0;37m "
 fi
 echo -e "\e[42m\033[1;97m Target ping probe completed \033[0;37m"
-echo -e "   "
 ender
 
 # Information Gathering
-echo -e "   "
 echo -e "\e[44m\033[1;97m Initiating Passive Information Gathering\033[0;37m"
-echo -e "   "
+echo " "
 
 # DNS
 
@@ -87,21 +87,18 @@ whois $1
 ender
 
 # Name Server Enumeration
-echo " "
 echo -e "\e[41m\033[1;97m Nameserver Information for \e[102m\033[1;97m$1 \033[0;37m"
 echo " "
 dig +short ns $1
 ender
 
 # Performing DNS IP Lookup
-echo " "
 echo -e "\e[41m\033[1;97m Performing DNS IP Lookup \033[0;37m"
 echo " "
 dig a $1  
 ender
 
 # Perform MX Record Lookup
-echo " "
 echo -e "\e[45m\033[1;97mEnter nameserver to check MX record\033[0;37m"
 echo " "
 read nameserver
@@ -111,10 +108,12 @@ dig mx $1 $nameserver
 ender
 
 # Perform Zone Transfer with DIG
-echo " "
 echo -e "\e[41m\033[1;97m Performing Zone Transfer with DIG \033[0;37m"
 echo " "
 dig axfr $1 @$nameserver
 echo " "
-echo -e "\e[45m\033[1;97m For more info visit https://www.acunetix.com/blog/articles/dns-zone-transfers-axfr\033[0;37m"
+echo -e "\e[45m\033[1;97m For more info visit \033[0;37m"
+echo " "
+echo -e "\033[1;97m[+] https://www.acunetix.com/blog/articles/dns-zone-transfers-axfr\033[0;37m"
+echo -e "\033[1;97m[+] For more DNS Zone Transfer Vulnerability check create curl request to https://api.hackertarget.com/zonetransfer/?q=target.com\033[0;37m"
 ender
