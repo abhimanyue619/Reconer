@@ -118,5 +118,3 @@ dig axfr $1 @$nameserver
 echo " "
 echo -e "\e[45m\033[1;97m For more info visit https://www.acunetix.com/blog/articles/dns-zone-transfers-axfr\033[0;37m"
 ender
-
-  
