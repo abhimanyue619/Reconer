@@ -117,3 +117,4 @@ echo " "
 echo -e "\033[1;97m[+] https://www.acunetix.com/blog/articles/dns-zone-transfers-axfr\033[0;37m"
 echo -e "\033[1;97m[+] For more DNS Zone Transfer Vulnerability check create curl request to https://api.hackertarget.com/zonetransfer/?q=target.com\033[0;37m"
 ender
+echo "test pull request"
